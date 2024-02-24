@@ -22,7 +22,7 @@ contract LumxERC404 is StdCheats, Test {
 
         vm.startBroadcast(owner);
 
-        nftLumx = new SimpleDN404("QuackLumxERC404", "quack", 10000, address(owner));
+        nftLumx = new SimpleDN404("QuackLumxERC404", "quack", 10000 * 10 ** 18, address(owner));
 
         vm.stopBroadcast();
         console.log("Nft Lumx:", address(nftLumx));
@@ -38,7 +38,6 @@ contract LumxERC404 is StdCheats, Test {
 
     function testTranferAndBalance() external {
         vm.startPrank(owner);
-        //nftLumx.setWhitelist(user, true); se colocarmos o endereco na whitelist ele nao recebe seus NFTs na hora da transferencia
         nftLumx.transfer(user, 10000000000000000000); //tranferindo 10 tokens
         uint256 saldoB = nftLumx.balanceOf(user);
         console.log("SaldoB", saldoB); //saldo atualizado
@@ -46,7 +45,7 @@ contract LumxERC404 is StdCheats, Test {
 
         vm.startPrank(user);
         nftLumx.transfer(owner, 10000000000000000000);
-        uint256 saldoB2 = nftLumx.balanceOf(user);
+        uint256 saldoB2 = nftLumx.balanceOf(owner);
         console.log("SaldoB", saldoB2); //saldo atualizado
         vm.stopPrank();
     }
