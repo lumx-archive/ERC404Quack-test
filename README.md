@@ -2,7 +2,7 @@
 ## O material e smart contract aqui expostos tem fins exclusivamente educacionais. Nada aqui deve ser replicado em projetos reais sem o processo de auditoria.
 
 ## Entre na nossa comunidade [Discord](https://discord.gg/qUPnv5EvqZ).
-## Caso seja uma empresa e queira usar nosso procolo, veja nossas soluções no site [Discord](https://www.lumx.io/pt)
+## Caso seja uma empresa e queira usar nosso procolo, veja nossas soluções no site [Lumx.io](https://www.lumx.io/pt)
 
 ### Use o repositorio:
 ```shell
