@@ -1,6 +1,40 @@
-## Foundry
+## Repositório referente ao Purple Brain ERC404 da Lumx.
+## O material e smart contract aqui expostos tem fins exclusivamente educacionais. Nada aqui deve ser replicado em projetos reais sem o processo de auditoria.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Entre na nossa comunidade [Discord](https://discord.gg/qUPnv5EvqZ).
+## Caso seja uma empresa e queira usar nosso procolo, veja nossas soluções no site [Discord](https://www.lumx.io/pt)
+
+### Use o repositorio:
+```shell
+$ git clone https://github.com/Lume-Studios/ERC404Quack-test
+$ cd ERC404Quack-test
+```
+
+### script de instalacao das bibliotecas:
+```shell
+$ forge install
+```
+
+### script de teste dos contratos pelo foundry:
+```shell
+$ forge test -vvvv
+```
+
+### script de gas report contratos pelo foundry:
+```shell
+$ forge test --gas-report
+```
+
+## Smart Contracts:
+
+```txt
+src
+├─ LumxQuack — Contrato usando o ERC404simple que usamos durante o workshop e usado no projeto da Pandora.
+├─ LumxQuackAdv — Contrato usando o ERC404advanced mais complexo e atualizado retirado do repositorio da Pandora
+└─ DN404 — Contrato mais avançado e mais eficiênte explicado durante workshop. 
+```
+
+**Foundry instrucoes basicas abaixo:**
 
 Foundry consists of:
 
