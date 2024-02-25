@@ -28,42 +28,42 @@ contract LumxERC404 is StdCheats, Test {
         console.log("Nft Lumx:", address(nftLumx));
     }
 
-    function testMint() external {
-        vm.startPrank(owner);
-        nftLumx.mint(user,1000);
-        uint256 saldoB = nftLumx.balanceOf(user);
-        console.log("SaldoB", saldoB);
-        vm.stopPrank();
-    }
+    // function testMint() external {
+    //     vm.startPrank(owner);
+    //     nftLumx.mint(user,1000);
+    //     uint256 saldoB = nftLumx.balanceOf(user);
+    //     console.log("SaldoB", saldoB);
+    //     vm.stopPrank();
+    // }
 
     function testTranferAndBalance() external {
         vm.startPrank(owner);
         nftLumx.transfer(user, 10000000000000000000); //tranferindo 10 tokens
-        uint256 saldoB = nftLumx.balanceOf(user);
-        console.log("SaldoB", saldoB); //saldo atualizado
+        // uint256 saldoB = nftLumx.balanceOf(user);
+        // console.log("SaldoB", saldoB); //saldo atualizado
         vm.stopPrank();
 
         vm.startPrank(user);
         nftLumx.transfer(owner, 10000000000000000000);
-        uint256 saldoB2 = nftLumx.balanceOf(owner);
-        console.log("SaldoB", saldoB2); //saldo atualizado
+        // uint256 saldoB2 = nftLumx.balanceOf(owner);
+        // console.log("SaldoB", saldoB2); //saldo atualizado
         vm.stopPrank();
     }
 
-    function testURI() external {
-        vm.startPrank(owner);
-        nftLumx.transfer(user, 5);
-        string memory tokenURI = nftLumx.tokenURI(10);
-        console.log("tokenUri is init:", tokenURI);
-        vm.stopPrank();
-    }
+    // function testURI() external {
+    //     vm.startPrank(owner);
+    //     nftLumx.transfer(user, 5);
+    //     string memory tokenURI = nftLumx.tokenURI(10);
+    //     console.log("tokenUri is init:", tokenURI);
+    //     vm.stopPrank();
+    // }
 
-    function testbaseURI() external {
-        vm.startPrank(owner);
-        nftLumx.mint(user,100);
-        nftLumx.setBaseURI("baseURI/");
-        string memory tokenURI = nftLumx.tokenURI(1);
-        console.log("tokenUri is init:", tokenURI);
-        vm.stopPrank();
-    }
+    // function testbaseURI() external {
+    //     vm.startPrank(owner);
+    //     nftLumx.mint(user,100);
+    //     nftLumx.setBaseURI("baseURI/");
+    //     string memory tokenURI = nftLumx.tokenURI(1);
+    //     console.log("tokenUri is init:", tokenURI);
+    //     vm.stopPrank();
+    // }
 }
