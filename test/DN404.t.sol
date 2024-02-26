@@ -22,7 +22,7 @@ contract LumxERC404 is StdCheats, Test {
 
         vm.startBroadcast(owner);
 
-        nftLumx = new SimpleDN404("QuackLumxERC404", "quack", 10000 * 10 ** 18, address(owner));
+        nftLumx = new SimpleDN404();
 
         vm.stopBroadcast();
         console.log("Nft Lumx:", address(nftLumx));
@@ -38,13 +38,13 @@ contract LumxERC404 is StdCheats, Test {
 
     function testTranferAndBalance() external {
         vm.startPrank(owner);
-        nftLumx.transfer(user, 10000000000000000000); //tranferindo 10 tokens
+        nftLumx.transfer(user, 10e18); //tranferindo 10 tokens
         // uint256 saldoB = nftLumx.balanceOf(user);
         // console.log("SaldoB", saldoB); //saldo atualizado
         vm.stopPrank();
 
         vm.startPrank(user);
-        nftLumx.transfer(owner, 10000000000000000000);
+        nftLumx.transfer(owner, 10e18);
         // uint256 saldoB2 = nftLumx.balanceOf(owner);
         // console.log("SaldoB", saldoB2); //saldo atualizado
         vm.stopPrank();

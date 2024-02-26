@@ -15,6 +15,14 @@
   src = "src"
   test = "test"
   ffi = true
-  fs_permissions = [{access = "read", path = "./broadcast"}] # set ./img
+
+[etherscan]
+  polygon = { key = "${API_KEY_POLYGONSCAN}" }
+  sepolia = { key = "${API_KEY_ETHERSCAN}" }
+
+[rpc_endpoints]
+  mumbai = "https://polygon-mumbai.infura.io/v3/${MUMBAI_KEY}"
+  sepolia = "https://sepolia.infura.io/v3/${SEPOLIA_KEY}"
+
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

@@ -17,20 +17,16 @@ contract SimpleDN404 is DN404, Ownable {
     string private _name;
     string private _symbol;
     string private _baseURI;
+    string constant _initURI = "https://ipfs.io/ipfs/bafkreicmovbocngbid4jnsofvxvqpiq5jag6qbwnkgkvgnpmpmimt7t3em";
 
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint96 initialTokenSupply,
-        address initialSupplyOwner
-    ) {
+    constructor() { 
         _initializeOwner(msg.sender);
 
-        _name = name_;
-        _symbol = symbol_;
+        _name =  "QuackLumxDN404";
+        _symbol =  "LMXDN404";
 
         address mirror = address(new DN404Mirror(msg.sender));
-        _initializeDN404(initialTokenSupply, initialSupplyOwner, mirror);
+        _initializeDN404(10000 * 10 ** 18, msg.sender, mirror);
     }
 
     function name() public view override returns (string memory) {
@@ -44,7 +40,9 @@ contract SimpleDN404 is DN404, Ownable {
     function tokenURI(uint256 tokenId) public view override returns (string memory result) {
         if (bytes(_baseURI).length != 0) {
             result = string(abi.encodePacked(_baseURI, LibString.toString(tokenId)));
-        }
+            } else {
+        result = _initURI;
+      }
     }
 
     // This allows the owner of the contract to mint more tokens.

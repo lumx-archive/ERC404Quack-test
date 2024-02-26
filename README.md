@@ -25,6 +25,18 @@ $ forge test -vvvv
 $ forge test --gas-report
 ```
 
+### script de deploy DN404:
+
+```shell
+$ forge script script/DeployDN404.s.sol:Deploy --rpc-url mumbai --private-key <PRIVATE_KEY> --broadcast
+```
+### script de deploy exemplo PANDORA:
+
+```shell
+$ forge script script/Deploy.s.sol:DeploySimpleERC404 --rpc-url mumbai --private-key <PRIVATE_KEY> --broadcast
+```
+
+
 ## Smart Contracts:
 
 ```txt
