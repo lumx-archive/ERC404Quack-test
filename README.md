@@ -4,6 +4,8 @@
 ## Entre na nossa comunidade [Discord](https://discord.gg/qUPnv5EvqZ).
 ## Caso seja uma empresa e queira usar nosso procolo, veja nossas soluções no site [Lumx.io](https://www.lumx.io/pt)
 
+## Nossa collection: [QuackLumxDN404](https://testnets.opensea.io/collection/quacklumxdn404)
+
 ### Use o repositorio:
 ```shell
 $ git clone https://github.com/Lume-Studios/ERC404Quack-test
